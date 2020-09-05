@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summary</title>
+</head>
+<body>
+	<h2>Summary:-</h2>
+	{% for field_summary in summary %}
+		{% for s in field_summary %}
+			{% if s in fields %}
+				<b>{{s}}</b><br>
+			{% else %}
+				{{s}}<br>
+			{% endif %}			
+		{% endfor %}	
+	{% endfor %}	
+	<br>
+	<form method="GET" action="/summarystats.com">
+		<input type="submit" value="Check new file">
+	</form>
+</body>
+</html>
+
